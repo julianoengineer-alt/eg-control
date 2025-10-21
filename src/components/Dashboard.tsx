@@ -117,7 +117,7 @@ export function Dashboard() {
       const searchLower = searchQuery.toLowerCase();
       
       // Buscar todos os registros (Firebase não suporta pesquisa parcial diretamente)
-      const allQuery = query(tabEgRef, orderBy('data', 'desc'), limit(100));
+      const allQuery = query(tabEgRef, orderBy('data', 'desc'));
       const snapshot = await getDocs(allQuery);
       
       const results = snapshot.docs
@@ -243,7 +243,7 @@ export function Dashboard() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm">EGs lidas hoje</CardTitle>
+              <CardTitle className="text-sm">EGs lidas Hoje</CardTitle>
               <FileText className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
