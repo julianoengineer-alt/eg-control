@@ -3,7 +3,7 @@ import { useAuth } from "../contexts/AuthContext";
 import { Button } from "./ui/button";
 import { Avatar, AvatarFallback } from "./ui/avatar";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
-import { LogOut, FileText, UserPlus, Menu, LayoutDashboard } from "lucide-react";
+import { LogOut, FileText, UserPlus, Menu, LayoutDashboard, Package } from "lucide-react";
 import { toast } from "sonner@2.0.3";
 import { useState } from "react";
 
@@ -45,6 +45,15 @@ export function Navbar() {
       icon: FileText,
       onClick: () => {
         navigate("/register-eg");
+        setMobileMenuOpen(false);
+      },
+      show: true,
+    },
+    {
+      label: "Registrar Objeto",
+      icon: Package,
+      onClick: () => {
+        navigate("/registro-obj");
         setMobileMenuOpen(false);
       },
       show: true,

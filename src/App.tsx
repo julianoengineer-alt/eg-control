@@ -5,6 +5,7 @@ import { AdminRoute } from "./components/AdminRoute";
 import { Login } from "./components/Login";
 import { Dashboard } from "./components/Dashboard";
 import { RegisterEG } from "./components/RegisterEG";
+import { RegistroObj } from "./components/RegistroObj";
 import { UserManagement } from "./components/UserManagement";
 import { TestFirestore } from "./components/TestFirestore";
 import { Toaster } from "./components/ui/sonner";
@@ -29,6 +30,14 @@ export default function App() {
             element={
               <ProtectedRoute>
                 <RegisterEG />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/registro-obj"
+            element={
+              <ProtectedRoute>
+                <RegistroObj />
               </ProtectedRoute>
             }
           />
