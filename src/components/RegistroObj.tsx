@@ -272,7 +272,7 @@ export function RegistroObj() {
                 />
                 <Label
                   htmlFor="keepViagem"
-                  className="text-sm cursor-pointer"
+                  className="text-xs text-muted-foreground"
                 >
                   Manter número da viagem após registrar
                 </Label>
