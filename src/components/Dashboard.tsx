@@ -38,7 +38,7 @@ export function Dashboard() {
 
       // Buscar últimos registros
       const tabEgRef = collection(db, 'tab_eg');
-      const recentQuery = query(tabEgRef, orderBy('data', 'desc'), limit(10));
+      const recentQuery = query(tabEgRef, orderBy('data', 'desc'), limit(3));
       const recentSnapshot = await getDocs(recentQuery);
       
       const records: EGRecord[] = recentSnapshot.docs.map(doc => ({
