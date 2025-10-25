@@ -197,6 +197,7 @@ export function RegistroObj() {
 
       <main className="container mx-auto px-4 py-4 md:py-8 space-y-6">
         {/* Card de Estatísticas */}
+        {/*
         <div className="max-w-2xl mx-auto">
           <Card>
             <CardHeader className="pb-3">
@@ -207,6 +208,7 @@ export function RegistroObj() {
             </CardHeader>
             <CardContent>
               {/*<div className="text-3xl">{objetosHoje}</div>*/}
+        {/*
               <div className="text-3xl">100</div>
               <p className="text-xs text-muted-foreground mt-1">
                 {new Date().toLocaleDateString("pt-BR", {
@@ -218,6 +220,7 @@ export function RegistroObj() {
             </CardContent>
           </Card>
         </div>
+        */}
 
         {/* Card de Registro */}
         <Card className="max-w-2xl mx-auto">
