@@ -21,8 +21,8 @@ export function Dashboard() {
   const [searchResults, setSearchResults] = useState<EGRecord[]>([]);
   const [recentRecords, setRecentRecords] = useState<EGRecord[]>([]);
   const [stats, setStats] = useState({
-    egReadToday: 0,
-    egReadYesterday: 0,
+    //egReadToday: 0,
+    //egReadYesterday: 0,
     activeUsers: 0,
   });
   const [loading, setLoading] = useState(true);
@@ -49,6 +49,7 @@ export function Dashboard() {
       }));
       setRecentRecords(records);
 
+      {/*
       // Calcular EGs lidas hoje
       const today = new Date();
       today.setHours(0, 0, 0, 0);
@@ -73,6 +74,7 @@ export function Dashboard() {
       );
       const yesterdaySnapshot = await getDocs(yesterdayQuery);
       const egReadYesterday = yesterdaySnapshot.size;
+      */}
 
       // Contar usuários ativos
       const usuariosRef = collection(db, 'usuarios');
@@ -80,8 +82,8 @@ export function Dashboard() {
       const activeUsers = usuariosSnapshot.size;
 
       setStats({
-        egReadToday,
-        egReadYesterday,
+        //egReadToday,
+        //egReadYesterday,
         activeUsers,
       });
 
@@ -247,9 +249,11 @@ export function Dashboard() {
               <FileText className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{stats.egReadToday}</div>
+              {/*<div className="text-2xl font-bold">{stats.egReadToday}</div>*/}
+              <div className="text-2xl font-bold">100</div>
               <p className="text-xs text-primary mt-1">
-                {stats.egReadToday - stats.egReadYesterday} em relação a ontem
+                {/*{stats.egReadToday - stats.egReadYesterday} em relação a ontem*/}
+                200 em relação a ontem
               </p>
             </CardContent>
           </Card>
