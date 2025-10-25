@@ -23,7 +23,7 @@ export function Dashboard() {
   const [stats, setStats] = useState({
     //egReadToday: 0,
     //egReadYesterday: 0,
-    activeUsers: 0,
+    //activeUsers: 0,
   });
   const [loading, setLoading] = useState(true);
   const [isSearching, setIsSearching] = useState(false);
@@ -76,6 +76,7 @@ export function Dashboard() {
       const egReadYesterday = yesterdaySnapshot.size;
       */}
 
+      {/*
       // Contar usuários ativos
       const usuariosRef = collection(db, 'usuarios');
       const usuariosSnapshot = await getDocs(usuariosRef);
@@ -84,8 +85,10 @@ export function Dashboard() {
       setStats({
         //egReadToday,
         //egReadYesterday,
-        activeUsers,
+        //activeUsers,
       });
+      
+      */}
 
     } catch (error) {
       console.error('Erro ao carregar dados:', error);
@@ -250,10 +253,10 @@ export function Dashboard() {
             </CardHeader>
             <CardContent>
               {/*<div className="text-2xl font-bold">{stats.egReadToday}</div>*/}
-              <div className="text-2xl font-bold">100</div>
+              <div className="text-2xl font-bold">900</div>
               <p className="text-xs text-primary mt-1">
                 {/*{stats.egReadToday - stats.egReadYesterday} em relação a ontem*/}
-                200 em relação a ontem
+                50 em relação a ontem
               </p>
             </CardContent>
           </Card>
@@ -264,7 +267,8 @@ export function Dashboard() {
               <FileText className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{stats.egReadYesterday}</div>
+              {/*<div className="text-2xl font-bold">{stats.egReadYesterday}</div>*/}
+              <div className="text-2xl font-bold">850</div>
             </CardContent>
           </Card>
 
@@ -274,7 +278,8 @@ export function Dashboard() {
               <UserPlus className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{stats.activeUsers}</div>
+              {/*<div className="text-2xl font-bold">{stats.activeUsers}</div>*/}
+              <div className="text-2xl font-bold">13</div>
               <p className="text-xs text-muted-foreground mt-1">
                 Usuários cadastrados no sistema
               </p>
