@@ -59,7 +59,7 @@ export function RegistroObj() {
     }
   };
 
-  
+  {/*
   const loadTodayStats = async () => {
     try {
       const hoje = new Date();
@@ -75,6 +75,8 @@ export function RegistroObj() {
       console.error("Erro ao carregar estatísticas:", error);
     }
   };
+
+  */}
 
 
   const handleSubmit = async (e: React.FormEvent) => {
