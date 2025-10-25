@@ -196,8 +196,9 @@ export function RegistroObj() {
 
       <main className="container mx-auto px-4 py-4 md:py-8 space-y-6">
         {/* Card de Estatísticas */}
+         {/*
         <div className="max-w-2xl mx-auto">
-          {/*
+         
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center gap-2">
