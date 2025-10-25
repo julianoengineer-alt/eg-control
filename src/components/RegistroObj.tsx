@@ -42,7 +42,7 @@ export function RegistroObj() {
   const loadRecentRecords = async () => {
     try {
       const tabObjetoRef = collection(db, "tab_objeto");
-      const q = query(tabObjetoRef, orderBy("data", "desc"), limit(10));
+      const q = query(tabObjetoRef, orderBy("data", "desc"), limit(3));
       const querySnapshot = await getDocs(q);
       
       const records: ObjetoRecord[] = querySnapshot.docs.map((doc) => ({
@@ -83,11 +83,11 @@ export function RegistroObj() {
       return;
     }
 
-    /*
+    
     if (!currentUser) {
       toast.error("Usuário não autenticado");
       return;
-    }*/
+    }
 
     try {
       setLoading(true);
@@ -394,7 +394,7 @@ export function RegistroObj() {
           <CardHeader>
             <CardTitle>Últimos Registros</CardTitle>
             <CardDescription>
-              Mostrando os 10 registros mais recentes
+              Mostrando os 3 registros mais recentes
             </CardDescription>
           </CardHeader>
           <CardContent>
