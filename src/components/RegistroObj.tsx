@@ -59,6 +59,7 @@ export function RegistroObj() {
     }
   };
 
+  {/*
   const loadTodayStats = async () => {
     try {
       const hoje = new Date();
@@ -74,6 +75,8 @@ export function RegistroObj() {
       console.error("Erro ao carregar estatísticas:", error);
     }
   };
+
+  */}
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -203,7 +206,8 @@ export function RegistroObj() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-3xl">{objetosHoje}</div>
+              {/*<div className="text-3xl">{objetosHoje}</div>*/}
+              <div className="text-3xl">100</div>
               <p className="text-xs text-muted-foreground mt-1">
                 {new Date().toLocaleDateString("pt-BR", {
                   day: "2-digit",
