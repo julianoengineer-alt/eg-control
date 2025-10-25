@@ -59,7 +59,7 @@ export function RegistroObj() {
     }
   };
 
-  {/*
+  
   const loadTodayStats = async () => {
     try {
       const hoje = new Date();
@@ -76,7 +76,6 @@ export function RegistroObj() {
     }
   };
 
-  */}
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
