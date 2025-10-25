@@ -249,7 +249,7 @@ export function Dashboard() {
             <CardContent>
               <div className="text-2xl font-bold">{stats.egReadToday}</div>
               <p className="text-xs text-primary mt-1">
-                +{stats.egReadToday - stats.egReadYesterday} em relação a ontem
+                {stats.egReadToday - stats.egReadYesterday} em relação a ontem
               </p>
             </CardContent>
           </Card>
