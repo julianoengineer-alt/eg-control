@@ -138,7 +138,9 @@ export function RegistroObj() {
       const tabObjetoRef = collection(db, "tab_objeto");
       const q = query(
         tabObjetoRef,
-        where("objeto", "==", searchObjeto.trim())
+        where("objeto", "==", searchObjeto.trim()),
+orderBy("data", "desc"), // Ordena os resultados
+      limit(3) // ↑↑↑ Pega apenas os 3
       );
       
       const querySnapshot = await getDocs(q);
