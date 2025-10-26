@@ -139,8 +139,7 @@ export function RegistroObj() {
       const q = query(
         tabObjetoRef,
         where("objeto", "==", searchObjeto.trim()),
-orderBy("data", "desc"), // Ordena os resultados
-      limit(3) // ↑↑↑ Pega apenas os 3
+      limit(5) // ↑↑↑ Pega apenas os 5
       );
       
       const querySnapshot = await getDocs(q);
