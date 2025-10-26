@@ -122,7 +122,7 @@ export function Dashboard() {
       const searchLower = searchQuery.toLowerCase();
       
       // Buscar todos os registros (Firebase não suporta pesquisa parcial diretamente)
-      const allQuery = query(tabEgRef, orderBy('data', 'desc'));
+      const allQuery = query(tabEgRef, orderBy('data', 'desc'), limit(3));
       const snapshot = await getDocs(allQuery);
       
       const results = snapshot.docs
