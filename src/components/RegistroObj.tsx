@@ -66,7 +66,7 @@ export function RegistroObj() {
       const inicioHoje = Timestamp.fromDate(hoje);
 
       const tabObjetoRef = collection(db, "tab_objeto");
-      const q = query(tabObjetoRef, where("data", ">=", inicioHoje));
+      const q = query(tabObjetoRef, where("data", ">=", inicioHoje), limit(10));
       const querySnapshot = await getDocs(q);
       
       setObjetosHoje(querySnapshot.size);
@@ -197,7 +197,7 @@ export function RegistroObj() {
 
       <main className="container mx-auto px-4 py-4 md:py-8 space-y-6">
         {/* Card de Estatísticas */}
-         {/*
+         
         <div className="max-w-2xl mx-auto">
          
           <Card>
@@ -208,9 +208,9 @@ export function RegistroObj() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              {/*<div className="text-3xl">{objetosHoje}</div>*/}
-          {/*
-              <div className="text-3xl">100</div>
+              <div className="text-3xl">{objetosHoje}</div>
+          
+              {/*<div className="text-3xl">100</div>*/}
               <p className="text-xs text-muted-foreground mt-1">
                 {new Date().toLocaleDateString("pt-BR", {
                   day: "2-digit",
