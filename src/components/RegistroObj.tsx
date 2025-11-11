@@ -42,7 +42,7 @@ export function RegistroObj() {
   const loadRecentRecords = async () => {
     try {
       const tabObjetoRef = collection(db, "tab_objeto");
-      const q = query(tabObjetoRef, orderBy("data", "desc"), limit(60));
+      const q = query(tabObjetoRef, orderBy("data", "desc"), limit(5));
       const querySnapshot = await getDocs(q);
       
       const records: ObjetoRecord[] = querySnapshot.docs.map((doc) => ({
